@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+.textFillDiv{
+    background-color: transparent;
+    font-size: 5vw;
+    color: transparent;
+    -webkit-text-stroke: .3vw rgba(0, 0, 0, 0);
+    position:relative;
+    padding:0;
+    display: inline-block;
+    white-space: nowrap;
+    font-family: 'Titillium Web',sans-serif;
+}
+.textFillDiv::before{
+    position:absolute;
+    display: inline-block;
+    font-family: 'Titillium Web',sans-serif;
+    z-index:2;
+    top:0;
+    left:0;
+    height:100%;
+    width:0%;
+    content: attr(data-text);
+    color:black;
+    font-size: 5vw;
+    -webkit-text-stroke: .3vw black;
+    overflow-x: hidden;
+    padding:0;
+    animation: slide-right 1s ease-in forwards;
+    overflow:hidden;
+    white-space: nowrap;
+}
+
+@keyframes slide-right {
+    0%{ width:0%}
+    100%{width:100%}
+}
+
+/* moves text to far right, then pivots it via rotation */
+.carouselCaption{
+    height: auto;
+    width: 66.67%;
+    right: 100%;
+    left: 100%;
+    bottom: -.2rem;
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+    z-index:2;
+}
+
+  

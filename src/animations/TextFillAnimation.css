@@ -1,0 +1,38 @@
+.textFillDiv{
+    background-color: transparent;
+    font-size: 8vw;
+    color: transparent;
+    -webkit-text-stroke: .3vw black;
+    position:relative;
+    padding:0;
+    display: inline-block;
+    white-space: nowrap;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.textFillDiv::before{
+    position:absolute;
+    display: inline-block;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    z-index:2;
+    top:0;
+    left:0;
+    height:100%;
+    width:0%;
+    content: attr(data-text);
+    color:black;
+    font-size: 8vw;
+    -webkit-text-stroke: .3vw black;
+    overflow-x: hidden;
+    padding:0;
+    animation: slide-right 1s ease-in forwards;
+    overflow:hidden;
+    white-space: nowrap;
+}
+
+@keyframes slide-right {
+    0%{ width:0%}
+    100%{width:100%}
+}
+
+
+  

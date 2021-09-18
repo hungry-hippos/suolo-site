@@ -1,12 +1,13 @@
-import './App.css';
-import SuoloCarousel from './components/SuoloCarousel'
-import SuoloAnimationWelcome from './components/SuoloAnimationWelcome'
+
+import FirstSection from './components/FirstSection'
+import SecondSection from './components/SecondSection'
+
 
 function App() {
   return (
     <div className="App">
-      <SuoloCarousel />
-      <SuoloAnimationWelcome />
+      <FirstSection />
+      <SecondSection />
     </div>
   );
 }

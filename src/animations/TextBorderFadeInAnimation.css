@@ -1,0 +1,69 @@
+
+#generic{display:block;
+text-align: center;
+}
+
+#logo{
+    animation: fillColor 1s ease forwards 2s;
+}
+
+#logo path:nth-child(1){
+    /* obtained through JS on console output  */
+    stroke-dasharray: 545;
+    stroke-dashoffset: 545;
+    /* add random delay values */
+    animation: lineAnimation 1s ease forwards .3s;
+}
+#logo path:nth-child(2){
+    stroke-dasharray: 525;
+    stroke-dashoffset: 525;
+    animation: lineAnimation 1s ease forwards .9s;
+}
+#logo path:nth-child(3){
+    stroke-dasharray: 329;
+    stroke-dashoffset: 329;
+    animation: lineAnimation 1s ease forwards .1s;
+}
+#logo path:nth-child(4){
+    stroke-dasharray: 329;
+    stroke-dashoffset: 329;
+    animation: lineAnimation 1s ease forwards .35s;
+}
+#logo path:nth-child(5){
+    stroke-dasharray: 527;
+    stroke-dashoffset: 527;
+    animation: lineAnimation 1s ease forwards .8s;
+}
+#logo path:nth-child(6){
+    stroke-dasharray: 790;
+    stroke-dashoffset: 790;
+    animation: lineAnimation 1s ease forwards 1s;
+}
+#logo path:nth-child(7){
+    stroke-dasharray: 528;
+    stroke-dashoffset: 528;
+    animation: lineAnimation 1s ease forwards .7s;
+}
+#logo path:nth-child(8){
+    stroke-dasharray: 564;
+    stroke-dashoffset: 564;
+    animation: lineAnimation 1s ease forwards .1s;
+}
+#logo path:nth-child(9){
+    stroke-dasharray: 329;
+    stroke-dashoffset: 329;
+    animation: lineAnimation 1s ease forwards .56s;
+}
+#logo path:nth-child(10){
+    stroke-dasharray: 543;
+    stroke-dashoffset: 543;
+    animation: lineAnimation 1s ease forwards .69s;
+}
+@keyframes lineAnimation {
+    100% {stroke-dashoffset: 0;}
+}
+@keyframes fillColor{
+    0% {fill: transparent;}
+    100% {fill: black;}
+}
+
