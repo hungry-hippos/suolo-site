@@ -14,20 +14,22 @@
     position:absolute;
     display: inline-block;
     font-family: 'Titillium Web',sans-serif;
-    z-index:2;
+    z-index:100;
     top:0;
     left:0;
     height:100%;
     width:0%;
     content: attr(data-text);
-    color:black;
+    color:white !important;
     font-size: 5vw;
-    -webkit-text-stroke: .3vw black;
+    -webkit-text-stroke: 1px white !important;
+    text-shadow: 2px 2px 8px rgb(0, 0, 0);
     overflow-x: hidden;
     padding:0;
     animation: slide-right 1s ease-in forwards;
     overflow:hidden;
     white-space: nowrap;
+
 }
 
 @keyframes slide-right {
@@ -37,14 +39,17 @@
 
 /* moves text to far right, then pivots it via rotation */
 .carouselCaption{
-    height: auto;
-    width: 66.67%;
-    right: 100%;
-    left: 100%;
-    bottom: -.2rem;
-    transform: rotate(-90deg);
-    transform-origin: bottom left;
-    z-index:2;
+    position: absolute;
+    width: 50vw;
+    right: 12%;
+    top: 0;
+    bottom: initial;
+    left: initial;
+    transform-origin: top right;
+    transform: rotate( -90deg);
+    letter-spacing: 2vh;
+    text-align: center;
+    z-index: 2;
 }
 
   

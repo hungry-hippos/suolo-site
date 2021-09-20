@@ -1,36 +1,62 @@
 
 #secondSection{
-    display: block;
-    width: 100%;
-    padding: 20px;
-    height: 55vw;
-    overflow:hidden;
     position:relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    overflow:hidden;
 }
 #backgroundImage{
     position:absolute;
     top:0;
     right:0;
     width:100%;
-    animation: imageIn 1s linear forwards;
+    animation: imageIn 3s linear forwards;
 }
 @keyframes imageIn{
     0%{opacity:0;width:100%}
-    100%{opacity:1;width:110%}
+    100%{opacity:1;width:130%}
 }
 
+
+/* LEFT HALF STUFF */
+#secondSecLeftH{
+    /* background-color: blue; */
+    width:50%;
+    min-width:500px;
+    height:40vw;
+    box-sizing: border-box;
+    flex-grow: 4;
+    position:relative;
+}
 /* more properties present in TextSLidingUpAnimation.css. This are mostly positioning properties */
 .animated-title{
-  height: 90vmin;
-  width: 90vmin;
+  height: 80%;
+  width: 80%;
   position: absolute;
   left: 50%;
   top: 100%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 0);
   background-color:#ffffffa1;
-  animation: boxSlideUp 1s ease-in forwards;
+  opacity:0;
+  animation: boxSlideUp .5s ease-in forwards;
 }
 @keyframes boxSlideUp{
-    0%{opacity:0}
-    100%{opacity:1; transform: translate(-50%,0%);top:0%}
+    to{
+        opacity:1;
+        transform: translate(-50%, -50%);
+        top:50%; 
+    }
 }
+
+/* RIGTH HALF STUFF */
+
+#secondSecRightH{
+    width:50%;
+    min-width:500px;
+    height:40vw;
+    box-sizing: border-box;
+    flex-grow: 4;
+}
+

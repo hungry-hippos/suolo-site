@@ -4,49 +4,110 @@
   box-sizing: border-box;
 }
 
-.iframely-embed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 50;
-  background: white;
-}
-
-#app {
-  z-index: 100;
-}
-
-#app {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  align-items: center;
-  padding-bottom: 4vmin;
-  height: 90vh;
-  width: 100%;
-  background: #ede8e2;
-  color: #3a3535;
-  overflow:hidden;
-}
 
 body {
-  display: grid;
   padding: 3vmin;
-  background: #e6ded7;
+  background: black;
+}
+#firstSectionMain {
+  padding-bottom: 4vmin;
+  height: 50vw;
+  width: 100%;
+  background: #80aeab;
+  overflow:hidden;
+  position:relative;
 }
 
 .title {
+  color: white;
   padding-left: 1em;
-  grid-column: 1/-1;
-  grid-row: 1;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(20%,-50%);
   font-family: "Titillium Web", sans-serif;
-  font-size: 8vw;
-  width: 100%;
   z-index: 2;
+  -webkit-animation:outer-left 1s 1s ease forwards;
+  animation: outer-left 1s 1s ease forwards;
 }
-.title > .title-inner {
+
+
+.title-inner {
   display: inline-block;
+  position:relative;
+  width:50vw;
+  -webkit-animation: inner-left 1s 1s ease both;
+          animation: inner-left 1s 1s ease both;
+}
+#buildingsLogo{
+  position:absolute;
+  left: 0%;
+  width: 45%;
+}
+#buildingsLogo svg{
+  width:100%;
+  height:100%;
+}
+
+.somos, .suolo {
+  text-align: center;
+  margin-top:2rem;
+  -webkit-animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+          animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.somos-inner {
+  font-size: 4vw;
+  -webkit-animation: inner-left 1s 1s ease both, text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both,change-spacing-low 1s 2s ease forwards;
+          animation: inner-left 1s 1s ease both, text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both,change-spacing-low 1s 2s ease forwards;
+}
+
+.suolo-inner {
+  font-size: 12vw;
+  line-height: .9;
+  -webkit-animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both,change-spacing-high 1s 2s ease forwards;
+          animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both,change-spacing-high 1s 2s ease forwards;
+}
+
+.carouselHolder {
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:1;
+  -webkit-animation: carousel-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
+          animation: carousel-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
+}
+#firstSectionCarousel img{
+  height:100%;
+  width:auto;
+  opacity:.8;
+}
+
+body:active * {
+  -webkit-animation: none !important;
+          animation: none !important;
+}
+
+
+@-webkit-keyframes outer-left {
+  from {
+    transform: translate(20%,-50%);
+  }
+  to {
+    left:0%;
+    transform: translate(0%,-50%);
+  }
+}
+@keyframes outer-left {
+  from {
+    transform: translate(20%,-50%);
+  }
+  to {
+    left:0%;
+    transform: translate(0%,-50%);
+  }
 }
 
 @-webkit-keyframes text-clip {
@@ -59,7 +120,6 @@ body {
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
-
 @keyframes text-clip {
   from {
     -webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
@@ -70,22 +130,7 @@ body {
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
-@-webkit-keyframes outer-left {
-  from {
-    transform: translateX(50%);
-  }
-  to {
-    transform: none;
-  }
-}
-@keyframes outer-left {
-  from {
-    transform: translateX(50%);
-  }
-  to {
-    transform: none;
-  }
-}
+
 @-webkit-keyframes inner-left {
   from {
     transform: translateX(-50%);
@@ -102,53 +147,7 @@ body {
     transform: none;
   }
 }
-.cafe,
-.mozart {
-  -webkit-animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
-          animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
-}
-
-.title-inner {
-  display: inline-block;
-  -webkit-animation: inner-left 1s 1s ease both;
-          animation: inner-left 1s 1s ease both;
-}
-
-.cafe-inner {
-  display: inline-block;
-  -webkit-animation: inner-left 1s 1s ease both, text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
-          animation: inner-left 1s 1s ease both, text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
-}
-
-.mozart-inner {
-  font-size: 12vw;
-  -webkit-animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
-          animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
-}
-
-.title {
-  -webkit-animation: outer-left 1s 1s ease both;
-          animation: outer-left 1s 1s ease both;
-}
-
-.cafe > .cafe-inner {
-  display: inline-block;
-  font-size: 6vw;
-}
-
-.mozart {
-  display: inline-block;
-}
-
-.carouselHolder {
-  grid-row: 1;
-  grid-column: 2;
-  margin-left: -2rem;
-  opacity: 0.7;
-  -webkit-animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
-          animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
-}
-@-webkit-keyframes image-in {
+@-webkit-keyframes carousel-in{
   from {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
             clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
@@ -158,7 +157,7 @@ body {
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
-@keyframes image-in {
+@keyframes carousel-in {
   from {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
             clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
@@ -168,13 +167,13 @@ body {
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
-.image img {
-  display: block;
-  width: 100%;
-  height: auto;
+@keyframes change-spacing-high{
+  to{letter-spacing:2vw;
+    text-shadow: 3px 3px 10px #4d4b4b;
+  }
 }
-
-body:active * {
-  -webkit-animation: none !important;
-          animation: none !important;
+@keyframes change-spacing-low{
+  to{letter-spacing:1vw;
+    text-shadow: 3px 3px 10px #4d4b4b;
+  }
 }

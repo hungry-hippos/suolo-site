@@ -1,26 +1,31 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useState } from 'react'
 import FirstSectionCarousel from './FirstSectionCarousel'
 import '../stylesheets/FirstSection.css'
 
 export default function FirstSection(){
-    useEffect(()=>{
-        console.log('LOADED')
-    })
-    return <div id="app">
+
+  //used to create a delay to avoid overlapping show-carousel animation with flip-carousel-item animation
+  const [showCarousel,setSetShowCarousel]=useState(false);
+  useEffect(()=>{
+    setTimeout(()=>{setSetShowCarousel(true)},2000);
+  },[])
+  
+    return <div id="firstSectionMain">
     <div className="title">
       <div className="title-inner">
-        <div className="cafe">
-          <div className="cafe-inner">SOMOS</div>
+        <div className="somos">
+          <div className="somos-inner">GRUPO</div>
         </div>
-        <div className="mozart">
-          <div className="mozart-inner">SUOLO</div>
+        <div className="suolo">
+          <div className="suolo-inner">SUOLO</div>
         </div>
       </div>
     </div>
   
     <div className="carouselHolder">
-      <FirstSectionCarousel />
+      {showCarousel && <FirstSectionCarousel /> }
     </div>
+    
   </div>
   
   
