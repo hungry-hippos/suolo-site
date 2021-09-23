@@ -1,16 +1,6 @@
 
-@keyframes showTopText {
-  0% { transform: translate3d(0, 100%, 0); }
-  40%, 60% { transform: translate3d(0, 50%, 0); }
-  100% { transform: translate3d(0, 0, 0); }
-}
-@keyframes showBottomText {
-  0% { transform: translate3d(0, -100%, 0); }
-  100% { transform: translate3d(0, 0, 0); }
-}
-.animated-title {
-  color: #222;
-  border-radius: 5%;
+.slidingUpHolder{
+  color: rgb(0, 0, 0);
   font-family: "Titillium Web", sans-serif;
 }
 
@@ -18,7 +8,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  height: 60%;
+  height: 20%;
   overflow: hidden;
 }
 .text-top-inner {
@@ -27,19 +17,24 @@
   width:100%;
   transform: translate(0, 100%);
   padding: .5vmin 0;
-  font-size: 6vw;
-  text-align: center;
-  animation: showTopText 1s ease forwards 1s;
+  font-size: 5vw;
+  animation: showTopText .6s ease forwards;
+  opacity:0;
+}
+@keyframes showTopText {
+  0% { transform: translate3d(0, 100%, 0); }
+  100% { transform: translate3d(0, 10%, 0); opacity:1; }
 }
 .text-top-inner span {
   display: block;
-  text-align: center;
+  text-align: left;
+  padding:0 10px;
 }
 .text-bottom {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 40%;
+  height: 80%;
   overflow: hidden;
 }
 .text-bottom-inner {
@@ -47,15 +42,29 @@
   top: 0;
   width:100%;
   transform: translate(0, -100%);
-  padding: 2vmin 0;
-  text-align: center;
-  font-size: 6vw;
-  animation: showBottomText 0.5s ease forwards 2.25s;
+  text-align: left;
+  font-size: 1vw;
+  padding: 3vw 1vw;
+  opacity:0;
+  animation: showBottomText .8s ease forwards .5s;
+}
+@keyframes showBottomText {
+  0% { transform: translate3d(0, -100%, 0); }
+  100% { transform: translate3d(0, 0, 0);opacity:1 }
 }
 .borderDivLine{
-  top:60%;
+  top:17%;
   width:90%;
   z-index:100;
-  margin:0 auto;
+  margin-left:1vw;
   border:2px solid black;
+  animation: hrFadeInFromLeft .8s ease both .8s; 
+}
+@keyframes hrFadeInFromLeft{
+  from {
+    clip-path: polygon(0 100%, 0 100%, 0 100%, 0% 100%);
+  }
+  to{
+    clip-path: polygon(0 0, 100% 1%, 100% 100%, 0% 100%);
+  }
 }

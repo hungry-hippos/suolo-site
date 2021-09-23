@@ -1,62 +1,75 @@
 
-#secondSection{
+.secondSectionEntry{
     position:relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
     width: 100%;
+    height: 40vw;
     overflow:hidden;
+    background-color: #9ec3da;
+    background-color: #2f536a;
 }
-#backgroundImage{
-    position:absolute;
-    top:0;
-    right:0;
-    width:100%;
-    animation: imageIn 3s linear forwards;
+
+/* more properties present in TextSLidingUpAnimation.css. This are mostly positioning properties */
+.slidingUpHolder{
+    height: 70%;
+    width: 40%;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 10%;
+    transform: translate(0px, -50%);
+    opacity: 0;
+    animation: fadeInAnimation .8s ease forwards;
+    background-color: rgb(255 255 255 / 63%);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
-@keyframes imageIn{
-    0%{opacity:0;width:100%}
-    100%{opacity:1;width:130%}
+.mirroredSlidingUpHolder{
+    transform: translate(0px, -50%) scaleX(-1);
+}
+@keyframes fadeInAnimation {
+    to {opacity: 1;}
 }
 
 
-/* LEFT HALF STUFF */
-#secondSecLeftH{
-    /* background-color: blue; */
-    width:50%;
-    min-width:500px;
-    height:40vw;
+.entryImgHolder{
+    width: 75%;
+    height: 100%;
+    float: right;
     box-sizing: border-box;
-    flex-grow: 4;
+    overflow: hidden;
+    background-color: #9ec3da;
     position:relative;
 }
-/* more properties present in TextSLidingUpAnimation.css. This are mostly positioning properties */
-.animated-title{
-  height: 80%;
-  width: 80%;
-  position: absolute;
-  left: 50%;
-  top: 100%;
-  transform: translate(-50%, 0);
-  background-color:#ffffffa1;
-  opacity:0;
-  animation: boxSlideUp .5s ease-in forwards;
-}
-@keyframes boxSlideUp{
-    to{
-        opacity:1;
-        transform: translate(-50%, -50%);
-        top:50%; 
+.mirrored{transform: scaleX(-1);}
+
+@media only screen and (max-width: 600px){
+    .secondSectionEntry{height:50vw;}
+    .slidingUpHolder{
+        transform: none;
+        width: 70%;
+        height: 50%;
+        left: 50%;
+        bottom: 6%;
+        top: auto;
+        transform: translate(-50%, 0);
+    }
+    .mirroredSlidingUpHolder{
+        transform: translate(-50%, 0) scaleX(-1);
+    }
+    .entryImgHolder{
+        width:100%;
+        height:70%;
     }
 }
-
-/* RIGTH HALF STUFF */
-
-#secondSecRightH{
-    width:50%;
-    min-width:500px;
-    height:40vw;
-    box-sizing: border-box;
-    flex-grow: 4;
+.entryImgHolder img{
+    position:absolute;
+    width:100%;
+    height:auto;
+    left:50%;
+    opacity:0;
+    animation: slideImgLeft .8s ease forwards;
+}
+@keyframes slideImgLeft{
+    to{left:0%; opacity:1}
 }
 
