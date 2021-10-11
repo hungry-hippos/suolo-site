@@ -1,0 +1,123 @@
+
+.slidingUpHolder{
+  color: rgb(0, 0, 0);
+  font-family: "Titillium Web", sans-serif;
+}
+
+.text-top {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 20%;
+  overflow: hidden;
+}
+.text-top-inner {
+  position: absolute;
+  bottom: 0;
+  width:100%;
+  transform: translate(0, 100%);
+  padding: .5vmin 0;
+  font-size: 5vw;
+  animation: showTopText .6s .5s ease forwards;
+  opacity:0;
+}
+.reduced-font-size{
+  font-size: 4vw !important;
+}
+@keyframes showTopText {
+  0% { transform: translate(0, 100%); }
+  100% { transform: translate(0, 10%); opacity:1; }
+}
+.text-top-inner span {
+  display: block;
+  text-align: left;
+  padding:0 2%;
+  letter-spacing: .3rem;
+}
+.text-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 75%;
+  overflow: hidden;
+}
+.text-bottom-inner {
+  position: absolute;
+  top: 0;
+  width:100%;
+  transform: translate(0, -100%);
+  text-align: left;
+  font-size: 1vw;
+  padding: 1vw 1vw;
+  opacity:0;
+  animation: showBottomText .8s ease forwards .8s;
+}
+@keyframes showBottomText {
+  0% { transform: translate3d(0, -100%, 0); }
+  100% { transform: translate3d(0, 0, 0);opacity:1 }
+}
+.borderDivLine{
+  top:18%;
+  width:90%;
+  z-index:100;
+  margin-left:1vw;
+  border:2px solid black;
+  animation: hrFadeInFromLeft .8s ease both 1s; 
+}
+@keyframes hrFadeInFromLeft{
+  from {
+    clip-path: polygon(0 100%, 0 100%, 0 100%, 0% 100%);
+  }
+  to{
+    clip-path: polygon(0 0, 100% 1%, 100% 100%, 0% 100%);
+  }
+}
+
+.entryDescription{background-color: transparent;
+display: block;
+width: 50%;
+float: right;
+}
+.cardList{background-color: transparent;
+width:35%;
+padding:0;
+}
+.cardList li{font-size: 1.7vw;
+list-style:none;
+position:relative;
+letter-spacing: 2px;
+padding: 10% 0;
+border-bottom: 2px solid #65696d;
+}
+.cardList li:nth-last-child(1){
+  border-bottom: none;
+}
+.chevronRight{font-size:1vw}
+.normalLi{display: inline;
+margin:0 10px;
+}
+.hoveredLi{display: inline;
+padding:5% 0 5% 10px;
+background-color: #323232;
+color:white;
+position:absolute;
+top:50%;
+transform: translate(0,-50%);
+left:0;
+clip-path: polygon(15% 0, 15% 0, 0 100%, 0 100%);
+overflow: hidden;
+}
+li:hover > .hoveredLi{
+  animation: li-slide-in .3s 0s ease-in both;
+}
+
+
+@keyframes li-slide-in {
+  from{
+    clip-path: polygon(15px 0, 15px 0, 0 100%, 0% 100%);
+  }
+  to{
+    clip-path: polygon(100% 0, 15px 0, 0 100%, 91% 100%);
+    width:100%;
+  }
+}
