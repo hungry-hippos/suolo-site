@@ -1,6 +1,7 @@
 
 import FirstSection from './components/FirstSection'
 import Slogan from './components/Slogan'
+import SloganV2 from './components/SloganV2'
 import SecondSection from './components/SecondSection'
 import BuildingsLogoAnimation from './components/BuildingsLogoAnimation'
 
@@ -38,8 +39,11 @@ function App() {
   return (
     <div className="App">
       {/* {isLoading ? <div style={{backgrounColor:'white',fontSize:'70px'}}> LOADING</div> : <FirstSection />} */}
-      <FirstSection />
+      {/* <FirstSection />
       <Slogan />
+      <SecondSection /> */}
+      <FirstSection />
+      <SloganV2 />
       <SecondSection />
       {/* <div style={{position:'relative',height:'40vw',width:'40vw',backgroundColor:'orange'}}>
         <TextSlidingLeftAnimation />

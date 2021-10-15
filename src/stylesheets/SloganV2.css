@@ -4,47 +4,75 @@ body{background-color: white;}
     height:30vw;
     width:100%;
     overflow:hidden;
+    padding: 6% 2%;
+    background-color: #2f536a;
+    position:relative;
+    margin:15vh 0;
 }
-.carouselLogoHolder{
-    width:130%;
+.imageHolder{
+    position:absolute;
+    top:0;
+    left:50%;
     height:100%;
+    width:30%;
+}
+.imageHolder::before{
+    content: '';
     position: absolute;
-    left:-26%;
-    display: flex;
-    animation: slide-right-carousel 1s 2.5s ease forwards;
+    top: 10%;
+    left: -10%;
+    height: 0%;
+    border-left: .3vw solid white;
+    animation: display-line 1s 3s ease forwards;
 }
-@keyframes slide-right-carousel {
-    to{left:0%;}
-}
-.sloganHolderLeftHalf{
-    display: inline-block;
-    height:100%;
-    width:20%;
-    opacity: 1;
-    background-image: linear-gradient(#e4e4e4 5px, transparent 5px), linear-gradient(to right, #e4e4e4 5px, #ffffff 5px);
-    background-size: 6vw 6vw;
+@keyframes display-line {
+    to{height:80%}
 }
 
-.sloganHolderLeftHalf img{
+.imageHolder .suoloLogoHolder svg{
     height:100%;
     width:auto;
+    margin-top:7%;
 }
-.sloganHolderRightHalf{
-    display:inline-block;
+.imageHolder .suoloLogoHolder{
+    position:absolute;
+    height:100%;
+    left:0;
+    z-index:0;
+    animation:slide-image-left 1s 2s ease forwards;
+}
+@keyframes slide-image-left {
+    to{left:-100%;}
+}
+
+
+.sloganText{
+    position:absolute;
     height:100%;
     width:80%;
-    padding: 2% 2%;
-    background-color: #a8b6bf;
+    top:0;
+    left:30%;
+    z-index:2;
+    padding: 6% 0;
+    font-family: "Titillium Web", sans-serif;
+    animation: slide-box-right 1s 2s ease-in forwards;
+    background-color: #2f536a;
 }
-.sloganText{
+@keyframes slide-box-right {
+    to{left:50%;}
+}
+
+@keyframes slide-pic-left{
+    to {left:-100%;}
+}
+
+.sloganTextPadding{
+    position:relative;
     height:100%;
     width:100%;
-    font-family: "Titillium Web", sans-serif;
-    position:relative;
-    overflow:hidden;
 }
 .sloganText span{
-    font-size:5vw;
+    font-size:4vw;
     color:white;
     text-shadow: 0px 0px 1px black;
     white-space: nowrap;
