@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/suolo-site/static/css/main.c9dbc220.chunk.css",
+    "main.js": "/suolo-site/static/js/main.31f4856d.chunk.js",
+    "main.js.map": "/suolo-site/static/js/main.31f4856d.chunk.js.map",
+    "runtime-main.js": "/suolo-site/static/js/runtime-main.166bd4e5.js",
+    "runtime-main.js.map": "/suolo-site/static/js/runtime-main.166bd4e5.js.map",
+    "static/css/2.818011ed.chunk.css": "/suolo-site/static/css/2.818011ed.chunk.css",
+    "static/js/2.080aa917.chunk.js": "/suolo-site/static/js/2.080aa917.chunk.js",
+    "static/js/2.080aa917.chunk.js.map": "/suolo-site/static/js/2.080aa917.chunk.js.map",
+    "index.html": "/suolo-site/index.html",
+    "static/css/2.818011ed.chunk.css.map": "/suolo-site/static/css/2.818011ed.chunk.css.map",
+    "static/css/main.c9dbc220.chunk.css.map": "/suolo-site/static/css/main.c9dbc220.chunk.css.map",
+    "static/js/2.080aa917.chunk.js.LICENSE.txt": "/suolo-site/static/js/2.080aa917.chunk.js.LICENSE.txt",
+    "static/media/construccion.dfb15a55.jpg": "/suolo-site/static/media/construccion.dfb15a55.jpg",
+    "static/media/plan.4f4d92fd.jpg": "/suolo-site/static/media/plan.4f4d92fd.jpg",
+    "static/media/sales.93385006.jpg": "/suolo-site/static/media/sales.93385006.jpg",
+    "static/media/suoloLogoClear.5937c490.png": "/suolo-site/static/media/suoloLogoClear.5937c490.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.166bd4e5.js",
+    "static/css/2.818011ed.chunk.css",
+    "static/js/2.080aa917.chunk.js",
+    "static/css/main.c9dbc220.chunk.css",
+    "static/js/main.31f4856d.chunk.js"
+  ]
+}
