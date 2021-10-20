@@ -1,6 +1,5 @@
 import React from 'react' 
 import ServiceCard from './ServiceCard';
-import TextSlidingLeftAnimation from './TextSlidingLeftAnimation';
 import planImg from '../images/plan.jpg';
 import constImg from '../images/construccion.jpg'
 import salesImg from '../images/sales.jpg'

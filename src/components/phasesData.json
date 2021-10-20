@@ -1,6 +1,6 @@
 {
     "Planeacion":{
-        "optionsArr":["Legal","Financiera","Arquitectonica","Comercial"],
+        "optionsArr":["Definicion de Proyecto","Proyeccion Financiera","Planeacion Arquitectonica","Tramite de Perimisos"],
         "bodyTextArr":[
             "Nuestro despacho legal se encarga de tramitar cualquier tramite, permiso y licencia necesaria para tu proyecto, ya sea comercial o residencial. Nuestros contactos en el govierno de mas de 40 estados nos facilitan expediciion pronta de cualquier papeleo.",
             "Cuanto va  a costar el desarollo? Tienes un terreno y no sabes que contruir? Nuestros especialistas en financias analizaran tu proyecto para determinar con certeza absoluta con que ruta proceder: comercial, residencial, o decision hibrida. Ademas, pronosticamos tu retorno en inversion basado en estudios de mercado micro- y macro-economicos.",
@@ -9,11 +9,11 @@
         ]
     },
     "Construccion":{
-        "optionsArr":["Flipping y Remodelacion","Mantenimiento Integral","Ejecucion de Obra","Control de Calidad"],
+        "optionsArr":["Ejecucion de Obra","Control e Implementacion de Cambios","Seguimiento de Obra","Control de Calidad"],
         "bodyTextArr":["Flipping y Remodelacion TEXT","Mantenimiento Integral TEXT","Ejecucion de Obra TEXT","Control de Calidad TEXT"]
     },
     "Comercializacion":{
-        "optionsArr":["Venta/Preventa","Renta","Marketing","Administracion Inmoviliaria"],
+        "optionsArr":["Estrategia de Venta y Preventa","Documentacion de Proyecto","Amarre de Tramites Legales y Financieros"],
         "bodyText":"COMERCIALIZACION BODY TEXT"
     }
 }

@@ -49,7 +49,7 @@
 }
 
 .entryImgHolder{
-    width: 85%;
+    width: 100%;
     height: 90%;
     right:0;
     top:50%;
@@ -80,8 +80,8 @@
 }
 .entryImgHolder img{
     position:absolute;
-    height:100%;
-    width:auto;
+    width:100%;
+    height:auto;
     left:50%;
     opacity:0;
     animation: slideImgLeft .8s ease forwards;

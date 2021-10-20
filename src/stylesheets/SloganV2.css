@@ -22,7 +22,7 @@ body{background-color: white;}
     top: 10%;
     left: -10%;
     height: 0%;
-    border-left: .3vw solid white;
+    border-left: .3vw solid #2a4a5e;
     animation: display-line 1s 3s ease forwards;
 }
 @keyframes display-line {
