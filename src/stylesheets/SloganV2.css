@@ -7,7 +7,7 @@ body{background-color: white;}
     padding: 6% 2%;
     background-color: #2f536a;
     position:relative;
-    margin:15vh 0;
+    margin:10vh 0 5vh 0;
 }
 .imageHolder{
     position:absolute;
@@ -39,7 +39,7 @@ body{background-color: white;}
     height:100%;
     left:0;
     z-index:0;
-    animation:slide-image-left 1s 2s ease forwards;
+    animation:slide-image-left 1s 2.3s ease forwards;
 }
 @keyframes slide-image-left {
     to{left:-100%;}
@@ -49,9 +49,9 @@ body{background-color: white;}
 .sloganText{
     position:absolute;
     height:100%;
-    width:80%;
+    width:100%;
     top:0;
-    left:30%;
+    left:10%;
     z-index:2;
     padding: 6% 0;
     font-family: "Titillium Web", sans-serif;
@@ -62,9 +62,6 @@ body{background-color: white;}
     to{left:50%;}
 }
 
-@keyframes slide-pic-left{
-    to {left:-100%;}
-}
 
 .sloganTextPadding{
     position:relative;

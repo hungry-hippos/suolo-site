@@ -6,6 +6,7 @@ import SecondSection from './components/SecondSection'
 import BuildingsLogoAnimation from './components/BuildingsLogoAnimation'
 
 import TextSlidingLeftAnimation from './components/TextSlidingLeftAnimation';
+import RankingsSection from './components/RankingsSection'
 import { useEffect,useState } from 'react';
 
 function App() {
@@ -38,16 +39,12 @@ function App() {
 
   return (
     <div className="App">
-      {/* {isLoading ? <div style={{backgrounColor:'white',fontSize:'70px'}}> LOADING</div> : <FirstSection />} */}
-      {/* <FirstSection />
-      <Slogan />
-      <SecondSection /> */}
       <FirstSection />
       <SloganV2 />
+      <RankingsSection  />
+
       <SecondSection />
-      {/* <div style={{position:'relative',height:'40vw',width:'40vw',backgroundColor:'orange'}}>
-        <TextSlidingLeftAnimation />
-      </div> */}
+
     </div>
   );
 }
