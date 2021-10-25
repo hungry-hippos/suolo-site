@@ -1,5 +1,4 @@
-
-.slidingUpHolder{
+.slidingUpHolder {
   color: rgb(0, 0, 0);
   font-family: "Titillium Web", sans-serif;
 }
@@ -14,26 +13,31 @@
 .text-top-inner {
   position: absolute;
   bottom: 0;
-  width:100%;
+  width: 100%;
   transform: translate(0, 100%);
-  padding: .5vmin 0;
+  padding: 0.5vmin 0;
   font-size: 5vw;
-  animation: showTopText .6s .5s ease forwards;
-  opacity:0;
+  animation: showTopText 0.6s 0.5s ease forwards;
+  opacity: 0;
   text-transform: uppercase;
 }
-.reduced-font-size{
+.reduced-font-size {
   font-size: 4vw !important;
 }
 @keyframes showTopText {
-  0% { transform: translate(0, 100%); }
-  100% { transform: translate(0, 10%); opacity:1; }
+  0% {
+    transform: translate(0, 100%);
+  }
+  100% {
+    transform: translate(0, 10%);
+    opacity: 1;
+  }
 }
 .text-top-inner span {
   display: block;
   text-align: left;
-  padding:0 2%;
-  letter-spacing: .3rem;
+  padding: 0 2%;
+  letter-spacing: 0.3rem;
 }
 .text-bottom {
   position: absolute;
@@ -45,43 +49,50 @@
 .text-bottom-inner {
   position: absolute;
   top: 0;
-  width:100%;
+  width: 100%;
   transform: translate(0, -100%);
   text-align: left;
   font-size: 1vw;
   padding: 1vw 1vw;
-  opacity:0;
-  animation: showBottomText .8s ease forwards .8s;
+  opacity: 0;
+  animation: showBottomText 0.8s ease forwards 0.8s;
 }
 @keyframes showBottomText {
-  0% { transform: translate3d(0, -100%, 0); }
-  100% { transform: translate3d(0, 0, 0);opacity:1 }
+  0% {
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
-.borderDivLine{
-  top:18%;
-  width:90%;
-  z-index:100;
-  margin-left:1vw;
-  border:2px solid black;
-  animation: hrFadeInFromLeft .8s ease both 1s; 
+.borderDivLine {
+  top: 18%;
+  width: 90%;
+  z-index: 100;
+  margin-left: 1vw;
+  border: 2px solid black;
+  animation: hrFadeInFromLeft 0.8s ease both 1s;
 }
-@keyframes hrFadeInFromLeft{
+@keyframes hrFadeInFromLeft {
   from {
     clip-path: polygon(0 100%, 0 100%, 0 100%, 0% 100%);
   }
-  to{
+  to {
     clip-path: polygon(0 0, 100% 1%, 100% 100%, 0% 100%);
   }
 }
 
-.entryDescriptionBullets{
-  width:100%;
+.entryDescriptionBullets {
+  width: 100%;
   display: block;
   font-size: 2.5vw;
   margin-left: 2%;
 }
-.entryDescriptionBullets li{
-  margin-bottom:5%;
+.entryDescriptionBullets li {
+  margin-bottom: 5%;
   list-style: none;
 }
-.chevronRight{font-size:1.5vw}
+.chevronRight {
+  font-size: 1.5vw;
+}

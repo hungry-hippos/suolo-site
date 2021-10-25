@@ -1,108 +1,125 @@
-body{background-color: white;}
+body {
+  background-color: white;
+}
 
-.sloganHolder{
-    height:30vw;
-    width:100%;
-    overflow:hidden;
-    padding: 6% 2%;
-    background-color: #2f536a;
-    position:relative;
-    margin:10vh 0 5vh 0;
+.sloganHolder {
+  height: 30vw;
+  width: 100%;
+  overflow: hidden;
+  padding: 6% 2%;
+  background-color: #2f536a;
+  position: relative;
+  margin: 10vh 0 5vh 0;
 }
-.imageHolder{
-    position:absolute;
-    top:0;
-    left:50%;
-    height:100%;
-    width:30%;
+.imageHolder {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 30%;
 }
-.imageHolder::before{
-    content: '';
-    position: absolute;
-    top: 10%;
-    left: -10%;
-    height: 0%;
-    border-left: .3vw solid #2a4a5e;
-    animation: display-line 1s 3s ease forwards;
+.imageHolder::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: -10%;
+  height: 0%;
+  border-left: 0.3vw solid #2a4a5e;
+  animation: display-line 1s 3s ease forwards;
 }
 @keyframes display-line {
-    to{height:80%}
+  to {
+    height: 80%;
+  }
 }
 
-.imageHolder .suoloLogoHolder svg{
-    height:100%;
-    width:auto;
-    margin-top:7%;
+.imageHolder .suoloLogoHolder svg {
+  height: 100%;
+  width: auto;
+  margin-top: 7%;
 }
-.imageHolder .suoloLogoHolder{
-    position:absolute;
-    height:100%;
-    left:0;
-    z-index:0;
-    animation:slide-image-left 1s 2.3s ease forwards;
+.imageHolder .suoloLogoHolder {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  z-index: 0;
+  animation: slide-image-left 1s 2.3s ease forwards;
 }
 @keyframes slide-image-left {
-    to{left:-100%;}
+  to {
+    left: -100%;
+  }
 }
 
-
-.sloganText{
-    position:absolute;
-    height:100%;
-    width:100%;
-    top:0;
-    left:10%;
-    z-index:2;
-    padding: 6% 0;
-    font-family: "Titillium Web", sans-serif;
-    animation: slide-box-right 1s 2s ease-in forwards;
-    background-color: #2f536a;
+.sloganText {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 10%;
+  z-index: 2;
+  padding: 6% 0;
+  font-family: "Titillium Web", sans-serif;
+  animation: slide-box-right 1s 2s ease-in forwards;
+  background-color: #2f536a;
 }
 @keyframes slide-box-right {
-    to{left:50%;}
+  to {
+    left: 50%;
+  }
 }
 
-
-.sloganTextPadding{
-    position:relative;
-    height:100%;
-    width:100%;
+.sloganTextPadding {
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
-.sloganText span{
-    font-size:4vw;
-    color:white;
-    text-shadow: 0px 0px 1px black;
-    white-space: nowrap;
-    letter-spacing: .3vw;
+.sloganText span {
+  font-size: 4vw;
+  color: white;
+  text-shadow: 0px 0px 1px black;
+  white-space: nowrap;
+  letter-spacing: 0.3vw;
 }
-.topSloganLine{
-    position: absolute;
-    left:100%;
-    top:0;
-    animation: slide-slogan-line 1.8s cubic-bezier(0.12, 1.73, 0.55, 0.34) forwards;
+.topSloganLine {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  animation: slide-slogan-line 1.8s cubic-bezier(0.12, 1.73, 0.55, 0.34)
+    forwards;
 }
-.midSloganLine{
-    position: absolute;
-    left:100%;
-    top:50%;
-    transform: translate(0,-50%);
-    animation: slide-slogan-line 1.8s  .3s cubic-bezier(0, 1.26, 0.74, 0.06) forwards;
+.midSloganLine {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translate(0, -50%);
+  animation: slide-slogan-line 1.8s 0.3s cubic-bezier(0, 1.26, 0.74, 0.06)
+    forwards;
 }
-.btmSloganLine{
-    position: absolute;
-    left:100%;
-    bottom:0;
-    animation: btm-slide-slogan-line 1.8s  .6s cubic-bezier(0.46, 0.03, 0.52, 0.97) forwards;
+.btmSloganLine {
+  position: absolute;
+  left: 100%;
+  bottom: 0;
+  animation: btm-slide-slogan-line 1.8s 0.6s
+    cubic-bezier(0.46, 0.03, 0.52, 0.97) forwards;
 }
 
 @keyframes slide-slogan-line {
-    to{left:0;}
+  to {
+    left: 0;
+  }
 }
-@keyframes btm-slide-slogan-line{
-    0%{left:100%}
-    25%{left:50%}
-    60%{left:55%}
-    100%{left:0}
+@keyframes btm-slide-slogan-line {
+  0% {
+    left: 100%;
+  }
+  25% {
+    left: 50%;
+  }
+  60% {
+    left: 55%;
+  }
+  100% {
+    left: 0;
+  }
 }
-
-

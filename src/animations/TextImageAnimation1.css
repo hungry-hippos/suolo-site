@@ -38,22 +38,22 @@
 @-webkit-keyframes text-clip {
   from {
     -webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-            clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
   }
   to {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 
 @keyframes text-clip {
   from {
     -webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-            clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
   }
   to {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 @-webkit-keyframes outer-left {
@@ -91,29 +91,31 @@
 .cafe,
 .mozart {
   -webkit-animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
-          animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+  animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 
 .title-inner {
   display: inline-block;
   -webkit-animation: inner-left 1s 1s ease both;
-          animation: inner-left 1s 1s ease both;
+  animation: inner-left 1s 1s ease both;
 }
 
 .cafe-inner {
   display: inline-block;
-  -webkit-animation: inner-left 1s 1s ease both, text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
-          animation: inner-left 1s 1s ease both, text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+  -webkit-animation: inner-left 1s 1s ease both,
+    text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+  animation: inner-left 1s 1s ease both,
+    text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 
 .mozart-inner {
   -webkit-animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
-          animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+  animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 
 .title {
   -webkit-animation: outer-left 1s 1s ease both;
-          animation: outer-left 1s 1s ease both;
+  animation: outer-left 1s 1s ease both;
 }
 
 .cafe > .cafe-inner {
@@ -130,26 +132,26 @@
   margin-left: -2rem;
   opacity: 0.7;
   -webkit-animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
-          animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
+  animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
 }
 @-webkit-keyframes image-in {
   from {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
   to {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 @keyframes image-in {
   from {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
   to {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 .image img {
@@ -160,5 +162,5 @@
 
 body:active * {
   -webkit-animation: none !important;
-          animation: none !important;
+  animation: none !important;
 }

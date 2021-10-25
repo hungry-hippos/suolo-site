@@ -1,83 +1,99 @@
-body{background-color: white;}
-
-.sloganHolder{
-    height:30vw;
-    width:100%;
-    overflow:hidden;
+body {
+  background-color: white;
 }
-.carouselLogoHolder{
-    width:130%;
-    height:100%;
-    position: absolute;
-    left:-26%;
-    display: flex;
-    animation: slide-right-carousel 1s 2.5s ease forwards;
+
+.sloganHolder {
+  height: 30vw;
+  width: 100%;
+  overflow: hidden;
+}
+.carouselLogoHolder {
+  width: 130%;
+  height: 100%;
+  position: absolute;
+  left: -26%;
+  display: flex;
+  animation: slide-right-carousel 1s 2.5s ease forwards;
 }
 @keyframes slide-right-carousel {
-    to{left:0%;}
+  to {
+    left: 0%;
+  }
 }
-.sloganHolderLeftHalf{
-    display: inline-block;
-    height:100%;
-    width:20%;
-    opacity: 1;
-    background-image: linear-gradient(#e4e4e4 5px, transparent 5px), linear-gradient(to right, #e4e4e4 5px, #ffffff 5px);
-    background-size: 6vw 6vw;
+.sloganHolderLeftHalf {
+  display: inline-block;
+  height: 100%;
+  width: 20%;
+  opacity: 1;
+  background-image: linear-gradient(#e4e4e4 5px, transparent 5px),
+    linear-gradient(to right, #e4e4e4 5px, #ffffff 5px);
+  background-size: 6vw 6vw;
 }
 
-.sloganHolderLeftHalf img{
-    height:100%;
-    width:auto;
+.sloganHolderLeftHalf img {
+  height: 100%;
+  width: auto;
 }
-.sloganHolderRightHalf{
-    display:inline-block;
-    height:100%;
-    width:80%;
-    padding: 2% 2%;
-    background-color: #a8b6bf;
+.sloganHolderRightHalf {
+  display: inline-block;
+  height: 100%;
+  width: 80%;
+  padding: 2% 2%;
+  background-color: #a8b6bf;
 }
-.sloganText{
-    height:100%;
-    width:100%;
-    font-family: "Titillium Web", sans-serif;
-    position:relative;
-    overflow:hidden;
+.sloganText {
+  height: 100%;
+  width: 100%;
+  font-family: "Titillium Web", sans-serif;
+  position: relative;
+  overflow: hidden;
 }
-.sloganText span{
-    font-size:5vw;
-    color:white;
-    text-shadow: 0px 0px 1px black;
-    white-space: nowrap;
-    letter-spacing: .3vw;
+.sloganText span {
+  font-size: 5vw;
+  color: white;
+  text-shadow: 0px 0px 1px black;
+  white-space: nowrap;
+  letter-spacing: 0.3vw;
 }
-.topSloganLine{
-    position: absolute;
-    left:100%;
-    top:0;
-    animation: slide-slogan-line 1.8s cubic-bezier(0.12, 1.73, 0.55, 0.34) forwards;
+.topSloganLine {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  animation: slide-slogan-line 1.8s cubic-bezier(0.12, 1.73, 0.55, 0.34)
+    forwards;
 }
-.midSloganLine{
-    position: absolute;
-    left:100%;
-    top:50%;
-    transform: translate(0,-50%);
-    animation: slide-slogan-line 1.8s  .3s cubic-bezier(0, 1.26, 0.74, 0.06) forwards;
+.midSloganLine {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translate(0, -50%);
+  animation: slide-slogan-line 1.8s 0.3s cubic-bezier(0, 1.26, 0.74, 0.06)
+    forwards;
 }
-.btmSloganLine{
-    position: absolute;
-    left:100%;
-    bottom:0;
-    animation: btm-slide-slogan-line 1.8s  .6s cubic-bezier(0.46, 0.03, 0.52, 0.97) forwards;
+.btmSloganLine {
+  position: absolute;
+  left: 100%;
+  bottom: 0;
+  animation: btm-slide-slogan-line 1.8s 0.6s
+    cubic-bezier(0.46, 0.03, 0.52, 0.97) forwards;
 }
 
 @keyframes slide-slogan-line {
-    to{left:0;}
+  to {
+    left: 0;
+  }
 }
-@keyframes btm-slide-slogan-line{
-    0%{left:100%}
-    25%{left:50%}
-    60%{left:55%}
-    100%{left:0}
+@keyframes btm-slide-slogan-line {
+  0% {
+    left: 100%;
+  }
+  25% {
+    left: 50%;
+  }
+  60% {
+    left: 55%;
+  }
+  100% {
+    left: 0;
+  }
 }
-
-

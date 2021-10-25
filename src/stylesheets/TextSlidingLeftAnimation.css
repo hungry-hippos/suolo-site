@@ -1,36 +1,35 @@
-.textSlidingLeftMain{
-    position:absolute;
-    background-color: rgba(82, 82, 82, 0.767);
-    width:100%;
-    height:100%;
-    top:0;
-    right:0;
-    transform: translate(100%,0);
-    padding:3vw;
-    animation: slide-left-box-in .5s ease forwards 3s;
+.textSlidingLeftMain {
+  position: absolute;
+  background-color: rgba(82, 82, 82, 0.767);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  transform: translate(100%, 0);
+  padding: 3vw;
+  animation: slide-left-box-in 0.5s ease forwards 3s;
 }
-@keyframes slide-left-box-in{
-    to{
-        transform:translate(0,0);
-    }
+@keyframes slide-left-box-in {
+  to {
+    transform: translate(0, 0);
+  }
 }
 
-.textSlidingLeftMain h1{
-    font-family: 'Titillium Web',sans-serif;
-    font-size:4vw;
-    animation:text-clip .5s 3.5s cubic-bezier(0.5, 0, 0.1, 1) both;
+.textSlidingLeftMain h1 {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 4vw;
+  animation: text-clip 0.5s 3.5s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
-.textSlidingLeftMain p{
-    font-family: 'Titillium Web',sans-serif;
-    font-size:1.6vw;
-    animation:text-clip .5s 3.5s cubic-bezier(0.5, 0, 0.1, 1) both;
+.textSlidingLeftMain p {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1.6vw;
+  animation: text-clip 0.5s 3.5s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 @keyframes text-clip {
-    from {
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
-    to {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
+  from {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
 }
-

@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 body {
   padding: 3vmin;
   background: black;
@@ -14,120 +13,125 @@ body {
   height: 50vw;
   width: 100%;
   background: #2f536a;
-  overflow:hidden;
-  position:relative;
+  overflow: hidden;
+  position: relative;
 }
 
 .title {
   color: white;
   padding-left: 1em;
   position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(20%,-50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(20%, -50%);
   font-family: "Titillium Web", sans-serif;
   z-index: 2;
-  -webkit-animation:outer-left 1s 1s ease forwards;
+  -webkit-animation: outer-left 1s 1s ease forwards;
   animation: outer-left 1s 1s ease forwards;
 }
 
-
 .title-inner {
   display: inline-block;
-  position:relative;
-  width:50vw;
+  position: relative;
+  width: 50vw;
   -webkit-animation: inner-left 1s 1s ease both;
-          animation: inner-left 1s 1s ease both;
+  animation: inner-left 1s 1s ease both;
 }
-#buildingsLogo{
-  position:absolute;
+#buildingsLogo {
+  position: absolute;
   left: 0%;
   width: 45%;
 }
-#buildingsLogo svg{
-  width:100%;
-  height:100%;
+#buildingsLogo svg {
+  width: 100%;
+  height: 100%;
 }
 
-.somos, .suolo {
+.somos,
+.suolo {
   text-align: center;
-  margin-top:2rem;
+  margin-top: 2rem;
   -webkit-animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
-          animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+  animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 
 .somos-inner {
   font-size: 4vw;
-  -webkit-animation: inner-left 1s 1s ease both, text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both,change-spacing-low 1s 2s ease forwards;
-          animation: inner-left 1s 1s ease both, text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both,change-spacing-low 1s 2s ease forwards;
+  -webkit-animation: inner-left 1s 1s ease both,
+    text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both,
+    change-spacing-low 1s 2s ease forwards;
+  animation: inner-left 1s 1s ease both,
+    text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both,
+    change-spacing-low 1s 2s ease forwards;
 }
 
 .suolo-inner {
   font-size: 12vw;
-  line-height: .9;
-  -webkit-animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both,change-spacing-high 1s 2s ease forwards;
-          animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both,change-spacing-high 1s 2s ease forwards;
+  line-height: 0.9;
+  -webkit-animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both,
+    change-spacing-high 1s 2s ease forwards;
+  animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both,
+    change-spacing-high 1s 2s ease forwards;
 }
 
 .carouselHolder {
-  position:absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  z-index:1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
   -webkit-animation: carousel-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
-          animation: carousel-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
+  animation: carousel-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
 }
-#firstSectionCarousel img{
-  height:100%;
-  width:auto;
-  opacity:.8;
+#firstSectionCarousel img {
+  height: 100%;
+  width: auto;
+  opacity: 0.8;
 }
 
 body:active * {
   -webkit-animation: none !important;
-          animation: none !important;
+  animation: none !important;
 }
-
 
 @-webkit-keyframes outer-left {
   from {
-    transform: translate(20%,-50%);
+    transform: translate(20%, -50%);
   }
   to {
-    left:0%;
-    transform: translate(0%,-50%);
+    left: 0%;
+    transform: translate(0%, -50%);
   }
 }
 @keyframes outer-left {
   from {
-    transform: translate(20%,-50%);
+    transform: translate(20%, -50%);
   }
   to {
-    left:0%;
-    transform: translate(0%,-50%);
+    left: 0%;
+    transform: translate(0%, -50%);
   }
 }
 
 @-webkit-keyframes text-clip {
   from {
     -webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-            clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
   }
   to {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 @keyframes text-clip {
   from {
     -webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-            clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
   }
   to {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 
@@ -147,33 +151,35 @@ body:active * {
     transform: none;
   }
 }
-@-webkit-keyframes carousel-in{
+@-webkit-keyframes carousel-in {
   from {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
   to {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 @keyframes carousel-in {
   from {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
   to {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
-@keyframes change-spacing-high{
-  to{letter-spacing:2vw;
+@keyframes change-spacing-high {
+  to {
+    letter-spacing: 2vw;
     text-shadow: 3px 3px 10px #4d4b4b;
   }
 }
-@keyframes change-spacing-low{
-  to{letter-spacing:1vw;
+@keyframes change-spacing-low {
+  to {
+    letter-spacing: 1vw;
     text-shadow: 3px 3px 10px #4d4b4b;
   }
 }
